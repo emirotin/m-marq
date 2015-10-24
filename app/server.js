@@ -6,6 +6,7 @@ console.log("starting node.js script...")
 // Clear the back buffer
 fb.clear();
 
+console.log('size', fb.size());
 var xMax = fb.size().width;
 var yMax = fb.size().height;
 
