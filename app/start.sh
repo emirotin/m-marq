@@ -5,8 +5,8 @@ udevadm trigger
 if [ ! -c /dev/fb1 ]; then
   echo "loading piTFT kernel module"
   modprobe spi-bcm2708
-  modprobe fbtft_device name=list; dmesg | tail -30
-  modprobe fbtft_device name=adafruit22 verbose=1 rotate=270
+  echo "111"
+  modprobe fbtft_device name=adafruitrt35 verbose=1 rotate=270 frequency=32000000
 
   sleep 1
 
