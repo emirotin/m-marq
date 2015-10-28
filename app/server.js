@@ -22,6 +22,9 @@ var draw = function() {
   var shift = (~~(time / INTERVAL) + index) % lineLength;
 
   fb.clear();
+
+  fb.image(xMax - 70, yMax - 70, "logo.png");
+
   fb.color(1, 1, 1);
   fb.font("fantasy", 320, true);
   fb.text(xMax / 2 - 10, yMax / 2, LINE[shift], true, 0);
