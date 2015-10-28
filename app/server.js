@@ -12,9 +12,9 @@ var yMax = fb.size().height;
 
 var draw = function() {
   fb.color(1, 1, 1);
-  fb.font("fantasy", 160);
+  fb.font("fantasy", 320);
   fb.text(xMax / 2, yMax / 2, "M", true, 0);
-  fb.blit(); // Transfer the back buffer to the screen buffer
+  fb.blit();
 };
 
 draw();
