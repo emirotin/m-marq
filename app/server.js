@@ -12,6 +12,7 @@ var xMax = fb.size().width;
 var yMax = fb.size().height;
 
 var draw = function() {
+  fb.clear();
   fb.color(1, 1, 1);
   fb.font("fantasy", 320, true);
   var letter = _.sample('ABCDEFGHIJKLMNOPQRSTUVWXYZ');
