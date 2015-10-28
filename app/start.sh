@@ -2,6 +2,15 @@
 udevd --daemon
 udevadm trigger
 
+# Sync the clock once
+ntpdate pool.ntp.org
+
+# Start background ntp syncing every 1min
+while true; do
+	sleep 60
+	ntpdate pool.ntp.org
+done &
+
 if [ ! -c /dev/fb1 ]; then
   echo "loading piTFT kernel module"
   modprobe spi-bcm2708

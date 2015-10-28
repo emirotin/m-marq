@@ -1,7 +1,8 @@
 # Use base image for device arch with node installed
 FROM resin/%%RESIN_MACHINE_NAME%%-node
 
-RUN apt-get update && apt-get install libcairo2-dev
+RUN apt-get update && apt-get install libcairo2-dev ntpdate \
+	&& apt-get clean && rm -rf /var/lib/apt/lists/*
 
 # create src dir
 RUN mkdir -p /usr/src/app/
