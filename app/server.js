@@ -7,7 +7,7 @@ console.log("starting node.js script...")
 fb.clear();
 
 
-var LINE = 'Hello Eugene!';
+var LINE = 'Hello, Moscow!';
 var INTERVAL = 1600;
 
 var index = parseInt(process.env.INDEX || '1', 10) - 1;
