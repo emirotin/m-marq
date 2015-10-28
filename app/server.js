@@ -8,7 +8,7 @@ console.log("starting node.js script...")
 fb.clear();
 
 
-var LINE = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+var LINE = 'Hello from Resin.io!';
 var INTERVAL = 1600;
 
 var index = _.parseInt(process.env.INDEX || '1') - 1;
@@ -33,4 +33,4 @@ var draw = function() {
 draw();
 setInterval(function() {
   draw();
-}, INTERVAL / 2);
+}, INTERVAL / 4);
