@@ -11,6 +11,7 @@ var LINE = 'Hello from Resin.io!';
 var INTERVAL = 1600;
 
 var index = parseInt(process.env.INDEX || '1', 10) - 1;
+LINE += ' ';
 var lineLength = LINE.length;
 
 var xMax = fb.size().width;
@@ -28,6 +29,4 @@ var draw = function() {
 };
 
 draw();
-setInterval(function() {
-  draw();
-}, INTERVAL / 16);
+setInterval(draw, INTERVAL / 16);
