@@ -26,7 +26,7 @@ var draw = function() {
   fb.color(1, 1, 1);
   fb.font("fantasy", 320, true);
   var letter = _.sample();
-  fb.text(xMax / 2 - 30, yMax / 2, LINE[shift], true, 0);
+  fb.text(xMax / 2 - 10, yMax / 2, LINE[shift], true, 0);
   fb.blit();
 };
 
