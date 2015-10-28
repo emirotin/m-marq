@@ -1,4 +1,3 @@
-var _ = require('lodash');
 var pitft = require("pitft");
 
 var fb = pitft("/dev/fb1", true); // Returns a framebuffer in double buffering mode
@@ -11,8 +10,7 @@ fb.clear();
 var LINE = 'Hello from Resin.io!';
 var INTERVAL = 1600;
 
-var index = _.parseInt(process.env.INDEX || '1') - 1;
-var count = _.parseInt(process.env.COUNT || '1') - 1;
+var index = parseInt(process.env.INDEX || '1', 10) - 1;
 var lineLength = LINE.length;
 
 var xMax = fb.size().width;
@@ -25,7 +23,6 @@ var draw = function() {
   fb.clear();
   fb.color(1, 1, 1);
   fb.font("fantasy", 320, true);
-  var letter = _.sample();
   fb.text(xMax / 2 - 10, yMax / 2, LINE[shift], true, 0);
   fb.blit();
 };
@@ -33,4 +30,4 @@ var draw = function() {
 draw();
 setInterval(function() {
   draw();
-}, INTERVAL / 4);
+}, INTERVAL / 16);
