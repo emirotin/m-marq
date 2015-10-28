@@ -23,11 +23,16 @@ var draw = function() {
 
   fb.clear();
 
-  fb.image(xMax - 70, yMax - 70, "logo.png");
+  fb.image(xMax - 70, yMax - 70, "resin-logo.png");
+  fb.image(16, yMax - 70, "rpi-logo.png");
 
   fb.color(1, 1, 1);
   fb.font("fantasy", 320, true);
   fb.text(xMax / 2 - 10, yMax / 2, LINE[shift], true, 0);
+
+  fb.font("fantasy", 12, false);
+  fb.text(16, 10, (new Date()).toTimeString(), false, 0);
+
   fb.blit();
 };
 
